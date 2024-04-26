@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="rtxtChinhSach.Text" xml:space="preserve">
+    <value>Tại sao lại là ABCD?
+
+Bởi vì chúng tôi không chỉ chạy theo xu hướng mà chúng tôi còn tạo ra chúng.
+
+Bởi vì chúng ta cùng nhau biến ý tưởng thành hiện thực, làm việc mỗi ngày để biến thế giới ngày mai trở thành một nơi tốt đẹp hơn. Bạn có tiêu chuẩn cao khi nói đến công việc của mình không? Chúng ta cũng thế. Tại Bosch, bạn sẽ khám phá được nhiều điều hơn là chỉ làm việc.
+
+Lợi ích và cơ hội nghề nghiệp
+
+- Làm việc tại một trong những nơi làm việc tốt nhất Việt Nam
+
+- Gia nhập một công ty toàn cầu năng động và phát triển nhanh chóng (môi trường nói tiếng Anh)
+
+- Thưởng lương tháng 13 + thưởng hiệu suất hấp dẫn (bạn sẽ thích!) + đánh giá hiệu suất hàng năm
+
+- 100% lương cơ bản hàng tháng và đóng bảo hiểm xã hội bắt buộc trong 2 tháng thử việc
+
+- Cơ hội onsite: công việc ngắn hạn và dài hạn
+
+- 15++ ngày nghỉ phép hàng năm + 1 ngày nghỉ sinh nhật
+
+- Bảo hiểm sức khoẻ cao cấp cho nhân viên và 02 thành viên gia đình
+
+- Thời gian làm việc linh hoạt
+
+- Hỗ trợ ăn trưa và gửi xe
+
+- Được đào tạo đa dạng về công nghệ hot/ ngoại ngữ (tiếng Anh/tiếng Trung/tiếng Nhật) và kỹ năng mềm
+
+- Hoạt động thể dục &amp; thể thao: bóng đá, cầu lông, yoga, Aerobic
+
+- Miễn phí tiện nghi giải trí trong nhà và đồ ăn nhẹ
+
+- Tham gia nhiều hoạt động xây dựng nhóm, chuyến đi công ty, tiệc cuối năm, tọa đàm công nghệ và nhiều sự kiện từ thiện.</value>
+  </data>
+  <data name="rtxtMoTa.Text" xml:space="preserve">
+    <value>- Với tư cách là nhà phát triển SW nhúng AUTOSAR, ứng viên sẽ tham gia vào toàn bộ vòng đời Phát triển phần mềm trên hệ thống Ô tô;
+
+- Phân tích yêu cầu của khách hàng, thiết kế và phát triển nhiều phần mềm nhúng trong hệ thống Ô tô;
+
+- Phát triển và thực hiện các thử nghiệm đơn vị, chức năng cho một trong các linh kiện điện: XGTW, MHU, OBC, DCDC, VCU, EDS, PDU...;
+
+- Nghiên cứu công nghệ mới, phương pháp mới nhằm nâng cao hiệu năng của hệ thống nhúng;
+
+- Có cơ hội làm việc onsite tại Châu Âu và/hoặc Mỹ, Châu Á;
+
+- Làm việc với các nhà cung cấp chất bán dẫn hàng đầu thế giới và các nhà cung cấp giải pháp lớn nhất trong lĩnh vực EV (xe điện).</value>
+  </data>
+  <data name="rtxtYeuCau.Text" xml:space="preserve">
+    <value>- Chuyên ngành Kỹ thuật máy tính/ Điện-điện tử/ Viễn thông/ Cơ điện tử hoặc tương đương;
+
+- Hơn 3 năm kinh nghiệm trong Phát triển phần mềm nhúng ô tô;
+
+- Giỏi lập trình C/C++ và ngôn ngữ script;
+
+- Kiến thức làm việc về lĩnh vực Ô tô: Kiến trúc AUTOSAR một trong các cấp độ (App, RTE, BSW, MCAL), An toàn chức năng, ...
+
+- Hệ điều hành nhúng (Autosar RTOS, non-Autosar RTOS);
+
+- Kinh nghiệm phát triển phần mềm cho vi điều khiển làm việc với các thiết bị ngoại vi MCU: AUTOSAR CAN, LIN, FlexRay, Ethernet, UART, I2C, SPI, ADC,PWM,Times, Clock, Watchdog,...;
+
+- Quy trình phát triển sản phẩm ô tô và kinh nghiệm chất lượng (ví dụ: A-SPICE, CMMI, FMEA, v.v.);
+
+- Thành thạo kiểm soát sửa đổi bao gồm: Git, Subversion hoặc tương đương;
+
+- Kỹ năng giao tiếp tiếng Anh tốt.</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAArxJREFUWEetls9qFEEQxvugqKBeVFC8CXpTMKJPoknEi6c95hWqZ0hWIuYQhOjs
+        KvoYBvHgxZiQQ8A8QFA8JDkoaEAjqPVt1zrTPTU7vb1+8Etveqqqa6b/lYkW0Wlj7V2mz783mD3mUMBv
+        9PWYWbO4eEq8/oOIrvCgz5kD5k8kB+z3zOT5ZYmSoKWlExzkEQf7FQSPx32dh8xxiRopZG7th1rAdNbM
+        /PwFid6iPL/OGe8pQXyIdphNYUe18fnEdtdklAbhzWMGB0Qd8cI66ag2dZDEefEKhHki2lKcdNISgN/m
+        YH3V5Bac7qSRmoAjE0+R22rNq53oN7fY/1NM3Iq2tvBi+HzjOJWpcPtcMxwOfk8s4zU6AcRdcYbuhBt1
+        yPSd4ZhqT+A7cxKGOF51I5DnNyQkkp3ivtfcDrdfM9bue3F0ZpBAP+j0qc65tW9qzyejwFttKA9Kut0z
+        Mjxsn6o2qRC9x1uN/lRE0zK8MUVxlP+/zXQamGMfzP0XL0Yzu0jgZ9DpQ7StHxwjhK9m7WotVgjRj/YE
+        HKveVMTI3abbSqwSSSBmtcL4K7cFt3OM9vkBpueIpIDYM16MOoMpWA86J+WxDI9Fe1Z5XmUNRj3lQTpE
+        r2R4Nw2azRDsKv4zqz702Wc7/cCpgrVSvfOJbgVxfLLsjhkUkO31Hh8YCbL2RRCn5N9RDKGA1IxKxk+A
+        6D6Di0yLhwR6YslyldChauiISwDHdpbd5PblyMGx9YkuiZcI1aturINtNxR+azbNPBDPipA9toXuUCc1
+        AaJ3Znn5mHgGQpVC9FF1DElL4DOX5xfFq0HYRqhe9QAl45bleLE8vyqjtGhh4Rw7va0FSQWfvbEcbxLm
+        CdUr9qsWNA6s9m7znMfIrYuVsRJxtri4gq02iXBq4XbD+Y1KBjeZu8rBrvQ94XZ6YBslY/4CocZcM4y8
+        YgIAAAAASUVORK5CYII=
+</value>
+  </data>
+</root>

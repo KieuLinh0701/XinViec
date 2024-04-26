@@ -1,0 +1,1468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC79B699-BC6D-4AE5-8ACC-98CE1A28A58D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>XinViec</RootNamespace>
+    <AssemblyName>XinViec</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DanhSachCbbLoc.cs" />
+    <Compile Include="FUngVienKhongPV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUngVienKhongPV.Designer.cs">
+      <DependentUpon>FUngVienKhongPV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTimCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTimCongTy.Designer.cs">
+      <DependentUpon>FTimCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoSoXinViec.cs" />
+    <Compile Include="DangTinTimViec.cs" />
+    <Compile Include="DangTinTimViecDAO.cs" />
+    <Compile Include="FCaiDatMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCaiDatMatKhau.Designer.cs">
+      <DependentUpon>FCaiDatMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FChonHoSoUngTuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChonHoSoUngTuyen.Designer.cs">
+      <DependentUpon>FChonHoSoUngTuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionTK.cs" />
+    <Compile Include="DAO.cs" />
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="FDangTinTimViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDangTinTimViec.Designer.cs">
+      <DependentUpon>FDangTinTimViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDatLichPhongVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDatLichPhongVan.Designer.cs">
+      <DependentUpon>FDatLichPhongVan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDoiEmailDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDoiEmailDangNhap.Designer.cs">
+      <DependentUpon>FDoiEmailDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FBanDaCoTKChua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBanDaCoTKChua.Designer.cs">
+      <DependentUpon>FBanDaCoTKChua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCongTy.Designer.cs">
+      <DependentUpon>FCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDangNhap.Designer.cs">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDangTinTuyenDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDangTinTuyenDung.Designer.cs">
+      <DependentUpon>FDangTinTuyenDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDanhGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDanhGia.Designer.cs">
+      <DependentUpon>FDanhGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FdkNhaTuyenDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FdkNhaTuyenDung.Designer.cs">
+      <DependentUpon>FdkNhaTuyenDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FdkUngVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FdkUngVien.Designer.cs">
+      <DependentUpon>FdkUngVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDuyetHoSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDuyetHoSo.Designer.cs">
+      <DependentUpon>FDuyetHoSo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FGiaoDienCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGiaoDienCongTy.Designer.cs">
+      <DependentUpon>FGiaoDienCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FGioiThieuCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGioiThieuCongTy.Designer.cs">
+      <DependentUpon>FGioiThieuCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FHoSoYeuThich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHoSoYeuThich.Designer.cs">
+      <DependentUpon>FHoSoYeuThich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FNhanBiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNhanBiet.Designer.cs">
+      <DependentUpon>FNhanBiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FNhanPhanHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNhanPhanHoi.Designer.cs">
+      <DependentUpon>FNhanPhanHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLichPhongVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLichPhongVan.Designer.cs">
+      <DependentUpon>FLichPhongVan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FQuanLyHoSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FQuanLyHoSo.Designer.cs">
+      <DependentUpon>FQuanLyHoSo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FQuenMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FQuenMK.Designer.cs">
+      <DependentUpon>FQuenMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongBao.Designer.cs">
+      <DependentUpon>FThongBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThongTinCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongTinCongTy.Designer.cs">
+      <DependentUpon>FThongTinCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThu.Designer.cs">
+      <DependentUpon>FThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTinTuyenDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTinTuyenDung.Designer.cs">
+      <DependentUpon>FTinTuyenDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTrangChu.Designer.cs">
+      <DependentUpon>FTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FQLCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FQLCongViec.Designer.cs">
+      <DependentUpon>FQLCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FXacNhanThongTinCTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXacNhanThongTinCTy.Designer.cs">
+      <DependentUpon>FXacNhanThongTinCTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FXemThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXemThongTinCaNhan.Designer.cs">
+      <DependentUpon>FXemThongTinCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoSo.Designer.cs">
+      <DependentUpon>HoSo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoSoXinViecDAO.cs" />
+    <Compile Include="ImageComparer.cs" />
+    <Compile Include="Lich.cs" />
+    <Compile Include="LichSuCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LichSuCongViec.Designer.cs">
+      <DependentUpon>LichSuCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LuuHoSoMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LuuHoSoMoi.Designer.cs">
+      <DependentUpon>LuuHoSoMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyTK.cs" />
+    <Compile Include="NhaTuyenDung.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="FBaoLoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBaoLoi.Designer.cs">
+      <DependentUpon>FBaoLoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StateStorage.cs" />
+    <Compile Include="FCaiDatEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCaiDatEmail.Designer.cs">
+      <DependentUpon>FCaiDatEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiKhoanDao.cs" />
+    <Compile Include="FTaoSuaHoSoMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTaoSuaHoSoMoi.Designer.cs">
+      <DependentUpon>FTaoSuaHoSoMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThongBao_LuaChon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongBao_LuaChon.Designer.cs">
+      <DependentUpon>FThongBao_LuaChon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKeCongViec.Designer.cs">
+      <DependentUpon>ThongKeCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinCaNhan.Designer.cs">
+      <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThongTinTuyenDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongTinTuyenDung.Designer.cs">
+      <DependentUpon>FThongTinTuyenDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimViecLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimViecLam.Designer.cs">
+      <DependentUpon>TimViecLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FHoSoXinViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHoSoXinViec.Designer.cs">
+      <DependentUpon>FHoSoXinViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FGDNguoiXinViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGDNguoiXinViec.Designer.cs">
+      <DependentUpon>FGDNguoiXinViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FCaiDat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCaiDat.Designer.cs">
+      <DependentUpon>FCaiDat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimViecLamDAO.cs" />
+    <Compile Include="TKhoan.cs" />
+    <Compile Include="FTrangCaNhanNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTrangCaNhanNguoiDung.Designer.cs">
+      <DependentUpon>FTrangCaNhanNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TroChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TroChuyen.Designer.cs">
+      <DependentUpon>TroChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucChonHoSoUngTuyen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucChonHoSoUngTuyen.Designer.cs">
+      <DependentUpon>ucChonHoSoUngTuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCCVYeuThich.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCVYeuThich.Designer.cs">
+      <DependentUpon>UCCVYeuThich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDangTinTimViec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDangTinTimViec.Designer.cs">
+      <DependentUpon>ucDangTinTimViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDChi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDChi.Designer.cs">
+      <DependentUpon>ucDChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucHienHoSo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucHienHoSo.Designer.cs">
+      <DependentUpon>ucHienHoSo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucHienThiCV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucHienThiCV.Designer.cs">
+      <DependentUpon>ucHienThiCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCHoSo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCHoSo.Designer.cs">
+      <DependentUpon>UCHoSo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucLichHenPhongVan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucLichHenPhongVan.Designer.cs">
+      <DependentUpon>ucLichHenPhongVan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucLichSuCongViec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucLichSuCongViec.Designer.cs">
+      <DependentUpon>ucLichSuCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhanPhanHoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNhanPhanHoi.Designer.cs">
+      <DependentUpon>ucNhanPhanHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCQLCongViec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCQLCongViec.Designer.cs">
+      <DependentUpon>UCQLCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCQLHoSo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCQLHoSo.Designer.cs">
+      <DependentUpon>UCQLHoSo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucTimCongTy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTimCongTy.Designer.cs">
+      <DependentUpon>ucTimCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTinTuyenDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTinTuyenDung.Designer.cs">
+      <DependentUpon>UCTinTuyenDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucViecLamYeuThich.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucViecLamYeuThich.Designer.cs">
+      <DependentUpon>ucViecLamYeuThich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FUngTuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUngTuyen.Designer.cs">
+      <DependentUpon>FUngTuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UngTuyen.cs" />
+    <Compile Include="UngTuyenDAO.cs" />
+    <Compile Include="UngVien.cs" />
+    <Compile Include="UngVienDAO.cs" />
+    <Compile Include="ViecLamYeuThich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViecLamYeuThich.Designer.cs">
+      <DependentUpon>ViecLamYeuThich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XemHoSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemHoSo.Designer.cs">
+      <DependentUpon>XemHoSo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YeuThich.cs" />
+    <Compile Include="YeuThichDAO.cs" />
+    <EmbeddedResource Include="FCaiDatMatKhau.resx">
+      <DependentUpon>FCaiDatMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBaoLoi.resx">
+      <DependentUpon>FBaoLoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChonHoSoUngTuyen.resx">
+      <DependentUpon>FChonHoSoUngTuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDangTinTimViec.resx">
+      <DependentUpon>FDangTinTimViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDatLichPhongVan.resx">
+      <DependentUpon>FDatLichPhongVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDoiEmailDangNhap.resx">
+      <DependentUpon>FDoiEmailDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBanDaCoTKChua.resx">
+      <DependentUpon>FBanDaCoTKChua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCongTy.resx">
+      <DependentUpon>FCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDangNhap.resx">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDangTinTuyenDung.resx">
+      <DependentUpon>FDangTinTuyenDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDanhGia.resx">
+      <DependentUpon>FDanhGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FdkNhaTuyenDung.resx">
+      <DependentUpon>FdkNhaTuyenDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FdkUngVien.resx">
+      <DependentUpon>FdkUngVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDuyetHoSo.resx">
+      <DependentUpon>FDuyetHoSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGiaoDienCongTy.resx">
+      <DependentUpon>FGiaoDienCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGioiThieuCongTy.resx">
+      <DependentUpon>FGioiThieuCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FHoSoYeuThich.resx">
+      <DependentUpon>FHoSoYeuThich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLichPhongVan.resx">
+      <DependentUpon>FLichPhongVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNhanBiet.resx">
+      <DependentUpon>FNhanBiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNhanPhanHoi.resx">
+      <DependentUpon>FNhanPhanHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FQLCongViec.resx">
+      <DependentUpon>FQLCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FQuanLyHoSo.resx">
+      <DependentUpon>FQuanLyHoSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FQuenMK.resx">
+      <DependentUpon>FQuenMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongBao.resx">
+      <DependentUpon>FThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongTinCongTy.resx">
+      <DependentUpon>FThongTinCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThu.resx">
+      <DependentUpon>FThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTimCongTy.resx">
+      <DependentUpon>FTimCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTinTuyenDung.resx">
+      <DependentUpon>FTinTuyenDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTrangChu.resx">
+      <DependentUpon>FTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUngVienKhongPV.resx">
+      <DependentUpon>FUngVienKhongPV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FXacNhanThongTinCTy.resx">
+      <DependentUpon>FXacNhanThongTinCTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FXemThongTinCaNhan.resx">
+      <DependentUpon>FXemThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoSo.resx">
+      <DependentUpon>HoSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LichSuCongViec.resx">
+      <DependentUpon>LichSuCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LuuHoSoMoi.resx">
+      <DependentUpon>LuuHoSoMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCaiDatEmail.resx">
+      <DependentUpon>FCaiDatEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTaoSuaHoSoMoi.resx">
+      <DependentUpon>FTaoSuaHoSoMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongBao_LuaChon.resx">
+      <DependentUpon>FThongBao_LuaChon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeCongViec.resx">
+      <DependentUpon>ThongKeCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinCaNhan.resx">
+      <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongTinTuyenDung.resx">
+      <DependentUpon>FThongTinTuyenDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimViecLam.resx">
+      <DependentUpon>TimViecLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGDNguoiXinViec.resx">
+      <DependentUpon>FGDNguoiXinViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FHoSoXinViec.resx">
+      <DependentUpon>FHoSoXinViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCaiDat.resx">
+      <DependentUpon>FCaiDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTrangCaNhanNguoiDung.resx">
+      <DependentUpon>FTrangCaNhanNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TroChuyen.resx">
+      <DependentUpon>TroChuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucChonHoSoUngTuyen.resx">
+      <DependentUpon>ucChonHoSoUngTuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCCVYeuThich.resx">
+      <DependentUpon>UCCVYeuThich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDangTinTimViec.resx">
+      <DependentUpon>ucDangTinTimViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDChi.resx">
+      <DependentUpon>ucDChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucHienHoSo.resx">
+      <DependentUpon>ucHienHoSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucHienThiCV.resx">
+      <DependentUpon>ucHienThiCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCHoSo.resx">
+      <DependentUpon>UCHoSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucLichHenPhongVan.resx">
+      <DependentUpon>ucLichHenPhongVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucLichSuCongViec.resx">
+      <DependentUpon>ucLichSuCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhanPhanHoi.resx">
+      <DependentUpon>ucNhanPhanHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCQLCongViec.resx">
+      <DependentUpon>UCQLCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCQLHoSo.resx">
+      <DependentUpon>UCQLHoSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTimCongTy.resx">
+      <DependentUpon>ucTimCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTinTuyenDung.resx">
+      <DependentUpon>UCTinTuyenDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucViecLamYeuThich.resx">
+      <DependentUpon>ucViecLamYeuThich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUngTuyen.resx">
+      <DependentUpon>FUngTuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViecLamYeuThich.resx">
+      <DependentUpon>ViecLamYeuThich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemHoSo.resx">
+      <DependentUpon>XemHoSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\103781_profile_edit_user_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\330399_bad_cancel_clear_close_decline_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1564491_add_create_new_plus_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1564491_add_create_new_plus_icon %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1564520_code_open_password_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1564534_customer_man_user_account_profile_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3671905_show_view_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3671905_show_view_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844425_can_trash_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844439_gear_setting_settings_wheel_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3890929_chart_growth_invest_market_stock_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3994355_arrow_bottom_down_downward_navigation_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4115235_exit_logout_sign out_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5402373_write_modify_tool_edit_pen_icon %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5402373_write_modify_tool_edit_pen_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7853748_account_settings_kashifarif_configuration_profile_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8665423_filter_circle_xmark_icon %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8674989_ic_fluent_history_regular_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9004762_search_find_zoom_magnifier_icon %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-03-07 073220.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\134226_back_arrow_left_icon %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352263_cancel_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352263_cancel_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352263_cancel_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-03-10 004634.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-03-10 004840.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-03-10 005243.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-03-10 005234.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\326688_floppy_save_guardar_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\326554_cancel_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3671803_closed_lock_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3671803_closed_lock_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3671803_closed_lock_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\326688_floppy_save_guardar_icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5402373_write_modify_tool_edit_pen_icon %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5402373_write_modify_tool_edit_pen_icon %284%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3507769_birthday_cake_celebration_food_iconoteka_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1608875_birthday_cake_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3507769_birthday_cake_celebration_food_iconoteka_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3507769_birthday_cake_celebration_food_iconoteka_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9599572_venus_mars_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9599572_venus_mars_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9055353_bxs_phone_call_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\134146_mail_email_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2849827_pointer_map_location_place_multimedia_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\403022_business man_male_user_avatar_profile_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\287695_location_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4550857_email_gmail_mail_sending_yahoo_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1078687_logo_media_phone_social_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1071016_location_gps_pin marker_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2400503_birthday cake_celebration_christmas cake_party_wedding cake_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\403023_avatar_user_woman_female_person_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844432_magnifier_search_zoom_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352359_filter_list_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352359_filter_list_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352359_filter_list_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8483277_arrow_arrows_direction_transfer_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8483277_arrow_arrows_direction_transfer_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7787516_sort_filter_funnel_sorting_conversion_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1110966_essential_list_set_sort_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9840584_filter_ecommerce_shop_market_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1110970_essential_grid_set_sort_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1110970_essential_grid_set_sort_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1110970_essential_grid_set_sort_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9043839_arrows_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3615740_email_inbox_mail_receive_receiver_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3994402_interface_message_paper plane_send_sent_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3994402_interface_message_paper plane_send_sent_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3994402_interface_message_paper plane_send_sent_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8541612_check_tick_mark_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\984759_cancel_close_delete_exit_no_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\984759_cancel_close_delete_exit_no_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8541612_check_tick_mark_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3994383_email_envelope_letter_mail_newsletter_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3671903_hide_view_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3671905_show_view_icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3671753_currency_dollar_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3671753_currency_dollar_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3671753_currency_dollar_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\287695_location_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8665030_business_time_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9004801_clock_time_schedule_hour_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9004773_tick_check_mark_accept_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3994402_interface_message_paper plane_send_sent_icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3994402_interface_message_paper plane_send_sent_icon %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\309035_user_account_human_person_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\309035_user_account_human_person_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10219188_business_briefcase_job_work_suitcase_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7295022_group_team_people_avatar_profile_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\171279_alarm_clock_bell_time_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2638324_chart_hierarchy_human resources_management_optimisation_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3018559_design_formation_layout_option_organization_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3994402_interface_message_paper plane_send_sent_icon %284%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9055353_bxs_phone_call_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4550857_email_gmail_mail_sending_yahoo_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2024660_call_contact us_contacts_phone_support_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\372903_username_name_full_user_round_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2849794_plane_paper airplane_send_airplane_multimedia_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3994402_interface_message_paper plane_send_sent_icon %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3994402_interface_message_paper plane_send_sent_icon %285%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CaiDatMatKhau_Dong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FilledStar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmptyStar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-03-14 033927.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-03-14 034500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-03-14 0345001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1564528_fly_messager_send_communication_email_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7217425_office_business_work_workplace_home_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7217425_office_business_work_workplace_home_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6843095_analysis_business_chart_manage_management_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4213408_address_book_contact_contacts_human_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8665618_lock_security_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\103781_profile_edit_user_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7853748_account_settings_kashifarif_configuration_profile_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844439_gear_setting_settings_wheel_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\416920_curriculum_cv_profile_sheet_vitae_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8684069_folder_file_document_user_profile_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7492230_new_file_add_create_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8665299_city_building_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8665299_city_building_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8665299_city_building_icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8541829_eye_vision_view_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8541829_eye_vision_view_icon %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9004762_search_find_zoom_magnifier_icon %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9004762_search_find_zoom_magnifier_icon %285%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3669395_call_ic_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8665916_scale_unbalanced_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10219171_income_salary_dollar_money bag_profit_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10219171_income_salary_dollar_money bag_profit_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10219171_income_salary_dollar_money bag_profit_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\287695_location_icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4550857_email_gmail_mail_sending_yahoo_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1078687_logo_media_phone_social_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9298902_history_ui_web_user interface_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8541835_history_time_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8665030_business_time_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6598158_balance_compare_justice_scale_weight_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9035176_time_clock_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11121097_fi_rr_chat_arrow_grow_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10863200_fi_br_chat_arrow_grow_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4817169_china_policy_usa_american first_china and us trade war_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4308246_business_dollar_grow_growing_growth_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4308246_business_dollar_grow_growing_growth_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4308246_business_dollar_grow_growing_growth_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-03-18 155513.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-03-18 1555131.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3884113_growth_income_invest_market_stock_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3884113_growth_income_invest_market_stock_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anhttcn_macdinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3994413_above_arrow_navigation_top_up_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4737448_account_user_avatar_profile_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3994379_lock_padlock_privacy_protection_security_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1564534_customer_man_user_account_profile_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844425_can_trash_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844425_can_trash_icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3994402_interface_message_paper plane_send_sent_icon %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9104315_plane_paper_sent_send_mail_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1564528_fly_messager_send_communication_email_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8665833_rotate_refresh_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8541829_eye_vision_view_icon %282%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844425_can_trash_icon %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3017938_adapt_alter_compose_correct_edit_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9004762_search_find_zoom_magnifier_icon %285%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844432_magnifier_search_zoom_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9004762_search_find_zoom_magnifier_icon %284%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844432_magnifier_search_zoom_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9004762_search_find_zoom_magnifier_icon %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9004762_search_find_zoom_magnifier_icon %286%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9004762_search_find_zoom_magnifier_icon %286%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9004762_search_find_zoom_magnifier_icon %286%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3952184_building_city_company_construction_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3952184_building_city_company_construction_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-03-29 081315.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-03-29 081510.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-03-29 081624.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10635564_file_document_upload_submit_file upload_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4168568_data_upload_download_file_upgrade_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThemYeuThich.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YeuThich.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YeuThich1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9111074_heart_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anhttcn_macdinh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\287695_location_icon %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4550857_email_gmail_mail_sending_yahoo_icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1078687_logo_media_phone_social_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9599572_venus_mars_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\403022_business man_male_user_avatar_profile_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9111074_heart_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9110809_heart_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844425_can_trash_icon %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5402373_write_modify_tool_edit_pen_icon %285%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7218126_resume_business_cv_work_job_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\416920_curriculum_cv_profile_sheet_vitae_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9004762_search_find_zoom_magnifier_icon %286%294.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8679723_cake_fill_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7830799_phone_actions_ring_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1564504_email_letter_mail_message_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8541853_home_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1343436_add_circle_download_plus_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anhttcn_macdinh2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\172626_user_male_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\172626_user_male_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\172626_user_male_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844444_dot_menu_more_option_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844444_dot_menu_more_option_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3017938_adapt_alter_compose_correct_edit_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChuaYeuThich.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3952184_building_city_company_construction_icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844444_dot_menu_more_option_icon %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7215642_resume_business_cv_work_job_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7215642_resume_business_cv_work_job_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7217867_resume_business_cv_work_job_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7217867_resume_business_cv_work_job_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7217867_resume_business_cv_work_job_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7738935_history_time_clock_schedule_event_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8678936_file_history_document_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8678815_file_history_fill_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6673747_care_doctor_health_healthcare_history_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3952925_archive_document_folder_note_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9004762_search_find_zoom_magnifier_icon %286%295.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7695997_document_business_paper_file_paperwork_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7695997_document_business_paper_file_paperwork_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7695997_document_business_paper_file_paperwork_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8541584_arrow_circle_left_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8541584_arrow_circle_left_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8723192_arrowleft_arrow_left_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8723062_arrowright_arrow_right_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8541584_arrow_circle_left_icon %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8723192_arrowleft_arrow_left_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8723062_arrowright_arrow_right_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1651909_calendar_christmas_date_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9004671_calendar_date_schedule_event_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9004671_calendar_date_schedule_event_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8723192_arrowleft_arrow_left_icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3507755_appointment_calendar_date_day_iconoteka_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3507755_appointment_calendar_date_day_iconoteka_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9004762_search_find_zoom_magnifier_icon %286%296.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8665423_filter_circle_xmark_icon %285%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3671698_filter_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8665423_filter_circle_xmark_icon %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844432_magnifier_search_zoom_icon %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9004762_search_find_zoom_magnifier_icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844432_magnifier_search_zoom_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844432_magnifier_search_zoom_icon %283%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
